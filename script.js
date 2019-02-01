@@ -21,7 +21,7 @@ request.onload = function () {
       card.setAttribute('class', 'card');
 
       const h1 = document.createElement('h1');
-      h1.textContent = movie.title;
+      h1.textContent = movie.name;
 
       const img = document.createElement('img');
       img.setAttribute('src', movie.image_url);
@@ -32,8 +32,9 @@ request.onload = function () {
       p.textContent = `${movie.description}...`;
 
       container.appendChild(card);
-      card.appendChild(h1);
       card.appendChild(img);
+      card.appendChild(h1);
+     
       card.appendChild(p);
     });
   } else {
