@@ -7,9 +7,12 @@
     background: #F6F6F6;
   }
   
+  #myHeader{
+    text-align: right;
+    padding-right: 10%;
+  }
 
   #search {
-    max-width: 100%;
     height: 300px;
     background-color: orange;
   }
@@ -49,6 +52,13 @@
     transition: all .2s linear;
   }
   
+  .sticky {
+    padding-right: 10%;
+    position: fixed;
+    top: 0;
+    width: 100%
+  }
+
   .card:hover {
     box-shadow: 2px 8px 45px rgba(0, 0, 0, .15);
     transform: translate3D(0, -2px, 0);
@@ -66,14 +76,4 @@
     }
   }
   
-  .card:nth-child(2n) h1 {
-    background-image: linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%);
-  }
-  
-  .card:nth-child(4n) h1 {
-    background-image: linear-gradient(120deg, #ff9a9e 0%, #fecfef 100%);
-  }
-  
-  .card:nth-child(5n) h1 {
-    background-image: linear-gradient(120deg, #ffc3a0 0%, #ffafbd 100%);
-  }
+ 
