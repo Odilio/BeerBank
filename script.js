@@ -17,8 +17,8 @@ request.onload = function () {
       const card = document.createElement('div');
       card.setAttribute('class', 'card');
 
-      const h1 = document.createElement('h1');
-      h1.textContent = movie.name;
+      const h2 = document.createElement('h2');
+      h2.textContent = movie.name;
 
       const img = document.createElement('img');
       img.setAttribute('src', movie.image_url);
@@ -30,7 +30,7 @@ request.onload = function () {
 
       container.appendChild(card);
       card.appendChild(img);
-      card.appendChild(h1);
+      card.appendChild(h2);
      
       card.appendChild(p);
     });
