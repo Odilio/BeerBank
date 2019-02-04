@@ -16,22 +16,29 @@ request.onload = function () {
     data.forEach(movie => {
       const card = document.createElement('div');
       card.setAttribute('class', 'card');
+      
+      const star = document.createElement('div')
+      star.setAttribute('class', 'click');
+
+      const star2 = document.createElement('span')
+      star2.setAttribute('class', 'fa fa-star-o');
 
       const h2 = document.createElement('h2');
       h2.textContent = movie.name;
 
       const img = document.createElement('img');
       img.setAttribute('src', movie.image_url);
-     
+      img.setAttribute('id', 'myBtn');
       
       const p = document.createElement('p');
       movie.description = movie.description.substring(0, 300);
       p.textContent = `${movie.description}...`;
 
       container.appendChild(card);
+      card.appendChild(star);
+      star.appendChild(star2);
       card.appendChild(img);
       card.appendChild(h2);
-     
       card.appendChild(p);
     });
   } else {
@@ -62,3 +69,32 @@ function myFunction() {
 } 
 
 request.send();
+
+
+$('.click').click(function() {
+	if ($('span').hasClass("fa-star")) {
+			$('.click').removeClass('active')
+		setTimeout(function() {
+			$('.click').removeClass('active-2')
+		}, 30)
+			$('.click').removeClass('active-3')
+		setTimeout(function() {
+			$('span').removeClass('fa-star')
+			$('span').addClass('fa-star-o')
+		}, 15)
+	} else {
+		$('.click').addClass('active')
+		$('.click').addClass('active-2')
+		setTimeout(function() {
+			$('span').addClass('fa-star')
+			$('span').removeClass('fa-star-o')
+		}, 150)
+		setTimeout(function() {
+			$('.click').addClass('active-3')
+		}, 150)
+		$('.info').addClass('info-tog')
+		setTimeout(function(){
+			$('.info').removeClass('info-tog')
+		},1000)
+	}
+})

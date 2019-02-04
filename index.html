@@ -2,24 +2,56 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>Ghibli App</title>
+  <title>BeerBank</title>
   
   <link href="https://fonts.googleapis.com/css?family=Dosis:400,700" rel="stylesheet">
   <link href="style.css" rel="stylesheet">
+  <link href="modal.css" rel="stylesheet">
+  <link href="star.css" rel="stylesheet">
 
 </head>
 
 <body>
-  <div id="search">
-     <div class="header" id="myHeader">
-    <a href=""><h3>home </h3></a>
-    <a href=""><h3>favourites </h3></a></div>
-    <a href=""><h1>The Beer Bank </h1></a>
 
-</div>
+
+  <div id="search">
+      <header>
+          <nav class="header" id="myHeader">
+      <ul>
+         
+          <li> <a href=""><h3>favourites </h3></a></li>
+          <li> <a href=""><h3>home </h3></a></li>
+      </ul>
+      </nav></header>
+    
+      <div class="form">
+          <a href="#" id="logo"><h1>The Beer Bank</h1></a>
+          <h3> Find your favourite beer here</h3>
+        </div>
+        
+        <!-- FORM SEARCH -->  
+        <div class="form">  
+          <form>
+            <label for="form-search"></label>
+            <input type="text" id="form-search" placeholder="Search for beer name">
+          </form>
+        </div>  
+
+  </div>
   <div id="root"></div>
 
+
+  
+  <div id="myModal" class="modal">
+
+    <div class="modal-content">
+      <span class="close">&times;</span>
+      <p>Some text in the Modal..</p>
+    </div>
+  
+  </div> 
   <script src="script.js"></script>
+  <script src="modal.js"></script>
 </body>
 
 </html>
